@@ -29,6 +29,8 @@ PyObject *printValues(PyObject *self, PyObject *args)  //Function args do not ch
     int num;
     /* Take the tuple of args coming from Python,
      * the first one is to be considered as string, hence the "s",
+     * the second is an integer, then the "i".
+     * See more at https://docs.python.org/3/c-api/arg.html
     */
     if (!PyArg_ParseTuple(args, "si", &x, &num))  
         return NULL;
